@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # add the devise gem for authenication and security
 gem 'devise'
+gem 'purecss-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
