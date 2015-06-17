@@ -1,7 +1,7 @@
-Maker-market
+# Makers-market
 Date: 17.6.2015 Author: John Kan
 
-Maker Market
+Makers-Market
 
 Overview: There are people that produce stuff; There are people that consume stuff Maker Market enables these 2 parties to have a common market-place
 
