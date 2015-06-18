@@ -1,34 +1,81 @@
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: 'pure-form pure-form-aligned' }) do |f| %>
   <%= devise_error_messages! %>
+  
+  <div class="field pure-control-group">
+    <%= f.label :first_name %>
+    <%= f.email_field :first_name, autofocus: true %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :last_name %>
+    <%= f.email_field :last_name %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :address_1 %>
+    <%= f.email_field :address_1 %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :address_2 %>
+    <%= f.email_field :address_2 %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :address_3 %>
+    <%= f.email_field :address_3 %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :address_4 %>
+    <%= f.email_field :address_4 %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :city_id %>
+    <%= f.email_field :city_id %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :avatar %>
+    <%= f.email_field :avatar %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :status %>
+    <%= f.email_field :status %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :producer %>
+    <%= f.email_field :producer %>
+  </div>
+  <div class="field pure-control-group">
+    <%= f.label :consumer %>
+    <%= f.email_field :consumer %>
+  </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="field pure-control-group">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div class="field pure-control-group">
+    <%= f.label :password %><br /><i>(leave blank if you don't want to change it)</i>
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
+  <div class="field pure-control-group">
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div class="field pure-control-group">
+    <%= f.label :current_password %><br /><i>(we need your current password to confirm your changes)</i>
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
+  <div class="field pure-control-group">
+    <div class="actions">
+      <%= f.submit "Update" %>
+    </div>
   </div>
 <% end %>
 
