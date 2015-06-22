@@ -1,0 +1,20 @@
+<H1>
+  Welcome to the Producers Market Place
+</H1>
+
+<%= link_to_if( user_signed_in? , 'Profile' , edit_user_registration_path(@user)) do
+  link_to 'Sign in', new_user_session_path()
+end %>
+
+</br>Producer
+</br>Buyer
+
+<%= link_to_if( user_signed_in?, 'Log out', destroy_user_session_path(@user), :method => :delete) do
+	end %>
+
+
+
+
+
+
+

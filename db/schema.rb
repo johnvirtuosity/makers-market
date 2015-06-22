@@ -11,7 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150619045142) do
+ActiveRecord::Schema.define(version: 20150622094232) do
+
+  create_table "cart_items", force: :cascade do |t|
+    t.integer  "cart_id",      limit: 4
+    t.integer  "product_id",   limit: 4
+    t.integer  "quantity",     limit: 4
+    t.decimal  "sale_price",             precision: 10
+    t.decimal  "buy_price",              precision: 10
+    t.datetime "date_shipped"
+    t.datetime "date_ordered"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.string   "cart_title",                     limit: 255
+    t.text     "special_remarks",                limit: 65535
+    t.boolean  "email_confirmation_on_shipping", limit: 1
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.integer  "user_id",                        limit: 4
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "category",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "name",        limit: 255
@@ -20,6 +47,7 @@ ActiveRecord::Schema.define(version: 20150619045142) do
     t.integer  "category_id", limit: 4
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
+    t.integer  "user_id",     limit: 4
   end
 
   create_table "users", force: :cascade do |t|

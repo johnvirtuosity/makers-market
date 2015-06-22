@@ -1,11 +1,67 @@
 Rails.application.routes.draw do
+  get 'cart_item/index'
+
+  get 'cart_item/show'
+
+  get 'cart_item/new'
+
+  get 'cart_item/edit'
+
+  get 'cart_item/create'
+
+  get 'cart_item/update'
+
+  get 'cart_item/destroy'
+
+  get 'cart/index'
+
+  get 'cart/show'
+
+  get 'cart/new'
+
+  get 'cart/edit'
+
+  get 'cart/create'
+
+  get 'cart/update'
+
+  get 'cart/destroy'
+
+  get 'product/index'
+
+  get 'product/show'
+
+  get 'product/new'
+
+  get 'product/edit'
+
+  get 'product/create'
+
+  get 'product/update'
+
+  get 'product/destroy'
+
+  get 'category/index'
+
+  get 'category/show'
+
+  get 'category/new'
+
+  get 'category/edit'
+
+  get 'category/create'
+
+  get 'category/update'
+
+  get 'category/destroy'
+
   devise_for :users
   resources :widgets
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'users#sign_in'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
