@@ -1,62 +1,76 @@
 Rails.application.routes.draw do
-  get 'cart_item/index'
+  # get 'cart_item/index'
 
-  get 'cart_item/show'
+  # get 'cart_item/show'
 
-  get 'cart_item/new'
+  # get 'cart_item/new'
 
-  get 'cart_item/edit'
+  # get 'cart_item/edit'
 
-  get 'cart_item/create'
+  # get 'cart_item/create'
 
-  get 'cart_item/update'
+  # get 'cart_item/update'
 
-  get 'cart_item/destroy'
+  # get 'cart_item/destroy'
 
-  get 'cart/index'
+  # get 'cart/index'
 
-  get 'cart/show'
+  # get 'cart/show'
 
-  get 'cart/new'
+  # get 'cart/new'
 
-  get 'cart/edit'
+  # get 'cart/edit'
 
-  get 'cart/create'
+  # get 'cart/create'
 
-  get 'cart/update'
+  # get 'cart/update'
 
-  get 'cart/destroy'
+  # get 'cart/destroy'
 
-  get 'product/index'
+  # get 'product/index'
 
-  get 'product/show'
+  # get 'product/show'
 
-  get 'product/new'
+  # get 'product/new'
 
-  get 'product/edit'
+  # get 'product/edit'
 
-  get 'product/create'
+  # get 'product/create'
 
-  get 'product/update'
+  # get 'product/update'
 
-  get 'product/destroy'
+  # get 'product/destroy'
 
-  get 'category/index'
+  # get 'category/index'
 
-  get 'category/show'
+  # get 'category/show'
 
-  get 'category/new'
+  # get 'category/new'
 
-  get 'category/edit'
+  # get 'category/edit'
 
-  get 'category/create'
+  # get 'category/create'
 
-  get 'category/update'
+  # get 'category/update'
 
-  get 'category/destroy'
+  # get 'category/destroy'
 
   devise_for :users
+  
   resources :widgets
+  resources :categories
+  resources :products
+
+  resources :users do
+    resources :products
+  end
+
+  resources :users do
+    resources :carts do
+      resources :cart_items
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
