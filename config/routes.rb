@@ -61,16 +61,10 @@ Rails.application.routes.draw do
   resources :categories
   resources :products
 
-  resources :users do
-    resources :products
-  end
-
-  resources :users do
-    resources :carts do
-      resources :cart_items
-    end
-  end
-
+  # resources :users
+  resources :carts
+  resources :cart_items
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
