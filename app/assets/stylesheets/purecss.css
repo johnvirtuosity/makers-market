@@ -7,3 +7,7 @@
   =require purecss/menus
   =require purecss/tables
 */
+
+.body {
+    background-image: url('/assets/food_production_image_1.jpg');
+}

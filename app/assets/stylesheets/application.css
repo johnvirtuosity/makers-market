@@ -14,3 +14,9 @@
  *= require_self
  *= require purecss
  */
+body {
+    background-image: url('/assets/food_production_image_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: 60%;
+}
