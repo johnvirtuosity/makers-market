@@ -7,6 +7,9 @@ Technology:
 Rails
 MySQL
 EmberJS
+Rspec
+Capybara
+Jasmine
 
 Phase 1:
 To do...
